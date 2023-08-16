@@ -1,0 +1,52 @@
+#!/bin/sh
+
+###########################
+# dotfm - Dotfile Manager #
+###########################
+
+REPODIR="${HOME}/dev/dotfiles"
+
+DOTFILES="\
+    .config/alacritty .config/clangd .config/dunst .config/gtk-3.0 .config/gtk-4.0 .config/lf .config/fish .config/newsboat .config/picom 
+    .config/sxhkd .config/wall.png
+
+    .local/bin/*
+
+    .bashrc
+"
+
+confirm () {
+    echo -n $1
+    read -p " [Y/n] " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]] ; then
+        $2
+    fi
+}
+
+commit () {
+    cd ${REPODIR}
+    git add .
+    git commit -m "+ update dotfiles"
+    git push
+}
+
+for FILE in $(echo "$DOTFILES" | sed "s/,/ /g")
+do
+    if [ "${FILE: -1}" = "*" ]; then
+        DEST="${FILE:: -1}"
+    else
+        DEST=${FILE}
+    fi
+
+    echo "copying:" "${REPODIR}/${FILE}"
+
+    if [ -d "${HOME}/${DEST}" ]; then
+        mkdir -p ${REPODIR}/${DEST}
+    fi
+
+    cp -rf ${HOME}/${FILE} $(dirname "${REPODIR}/${FILE}")
+done
+
+echo
+confirm "Commit changes to git?" commit

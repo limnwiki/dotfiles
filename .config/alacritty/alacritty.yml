@@ -1,0 +1,88 @@
+ # Garuda Linux configuration for Alacritty
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 100
+    lines: 30
+  dynamic_padding: true
+  decorations: full
+  title: Alacritty
+  opacity: 0.9
+  class:
+    instance: Alacritty
+    general: Alacritty
+  window.decorations_theme_variant: dark
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+draw_bold_text_with_bright_colors: true
+
+save_to_clipboard: true
+
+window.dynamic_title: true
+
+cursor:
+  style: Underline
+
+live_config_reload: true
+
+shell:
+  program: /usr/bin/fish
+  args:
+    - --login
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Plus,     mods: Control,       action: IncreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+      # size: 11.0
+
+colors:
+  # Default colors
+  primary:
+    background: '0x171d23'
+    foreground: '0xffffff'
+
+  # Cursor colors
+  cursor:
+    text:   '0xfafafa'
+    cursor: '0x008b94'
+
+  # Normal colors
+  normal:
+    black:   '0x333f4a'
+    red:     '0xd95468'
+    green:   '0x8bd49c'
+    blue:    '0x539afc'
+    magenta: '0xb62d65'
+    cyan:    '0x70e1e8'
+    white:   '0xb7c5d3'
+
+  # Bright colors
+  bright:
+    black:   '0x41505e'
+    red:     '0xd95468'
+    green:   '0x8bd49c'
+    yellow:  '0xebbf83'
+    blue:    '0x5ec4ff'
+    magenta: '0xe27e8d'
+    cyan:    '0x70e1e8'
+    white:   '0xffffff'

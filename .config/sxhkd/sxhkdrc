@@ -1,0 +1,10 @@
+Pause
+    screenshot
+# scrot "${HOME}/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
+
+shift + Pause
+	screenshot select
+
+control + Pause
+	screenshot window
+

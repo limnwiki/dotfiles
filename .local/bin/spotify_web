@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# brave --app-id=pjibgclleladliembfgfagdaldikeohf
+brave --new-window "open.spotify.com"
