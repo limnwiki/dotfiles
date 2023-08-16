@@ -136,5 +136,6 @@ ex ()
   fi
 }
 
-PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/.local/bin/
+export XDG_CACHE_HOME=~/.cache
 fish

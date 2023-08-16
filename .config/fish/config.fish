@@ -9,6 +9,8 @@ if [ -d "$HOME/.local/bin" ] ;
     set PATH "$HOME/.local/bin:$PATH"
 end
 
+set XDG_CACHE_HOME "$HOME/.cache/"
+
 abbr !! "$history[1]"
 abbr p "sudo pacman"
 abbr pu "sudo pacman -Syyu"
@@ -17,5 +19,5 @@ abbr f "lf --command 'fzf'"
 abbr cb "xclip -selection clipboard"
 abbr nb "newsboat -r"
 abbr hgs "hugo server --noHTTPCache"
-abbr rs "rsync -vrP --delete-after . root@sunfish.site:/var/www/sunfish"
+abbr rs "rsync -vrP --delete-after . root@limn.wiki:/var/www/sunfish"
 

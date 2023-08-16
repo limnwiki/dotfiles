@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# curl "https://random-word-api.herokuapp.com/word"
+
+while [ true ] 
+do 
+  curl "https://random-word-api.herokuapp.com/word?length=4"
+  echo
+
+  curl "https://random-word-api.herokuapp.com/word?length=5"
+  echo
+
+  curl "https://random-word-api.herokuapp.com/word?length=6"
+  echo
+done
