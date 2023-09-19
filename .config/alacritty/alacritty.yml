@@ -31,7 +31,7 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /usr/bin/fish
+  program: /usr/bin/bash
   args:
     - --login
 
