@@ -136,7 +136,10 @@ ex ()
   fi
 }
 
+alias emmet-ls='emmet-language-server'
+
 export PATH=$PATH:~/.local/bin/
 export XDG_CACHE_HOME=~/.cache
 export MANPAGER="nvim +Man!"
 fish
+exit
