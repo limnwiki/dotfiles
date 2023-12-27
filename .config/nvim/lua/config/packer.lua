@@ -51,4 +51,12 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},
         }
     }
+
+    use {'nvim-treesitter/nvim-treesitter'}
+    use {'nvim-orgmode/orgmode', config = function()
+        local orgmode = require('orgmode')
+        orgmode.setup_ts_grammar()
+        orgmode.setup{}
+    end
+}
 end)

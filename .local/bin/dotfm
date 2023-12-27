@@ -8,7 +8,7 @@ REPODIR="${HOME}/dev/dotfiles"
 
 DOTFILES="\
     .config/alacritty .config/clangd .config/dunst .config/gtk-3.0 .config/gtk-4.0 .config/lf .config/fish .config/newsboat .config/picom 
-    .config/sxhkd .config/nvim .config/wall.png
+    .config/sxhkd .config/nvim .config/mpv .config/zathura .config/wall.png
 
     .local/bin/*
 

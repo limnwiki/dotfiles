@@ -8,5 +8,5 @@ end)
 
 -- Replace the language servers listed here
 -- with the ones you have installed
-lsp_zero.setup_servers({'tsserver', 'clangd', 'lua_ls', 'html', 'emmet_ls', 'bashls', 'gopls'})
+lsp_zero.setup_servers({'tsserver', 'clangd', 'lua_ls', 'html', 'cssls', 'emmet_ls', 'svelte', 'bashls', 'gopls'})
 
