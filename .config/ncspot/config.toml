@@ -1,0 +1,6 @@
+[keybindings]
+"q" = "back"
+"Space" = "pause"
+"Shift+q" = "quit"
+"Enter" = "play"
+"Backspace" = "noop"

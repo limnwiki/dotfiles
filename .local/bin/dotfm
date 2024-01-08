@@ -8,7 +8,7 @@ REPODIR="${HOME}/dev/dotfiles"
 
 DOTFILES="\
     .config/alacritty .config/clangd .config/dunst .config/gtk-3.0 .config/gtk-4.0 .config/lf .config/fish .config/newsboat .config/picom 
-    .config/sxhkd .config/nvim .config/mpv .config/zathura .config/wall.png
+    .config/sxhkd .config/nvim .config/mpv .config/ncspot .config/zathura .config/wall.png
 
     .local/bin/*
 
@@ -22,6 +22,11 @@ confirm () {
     if [[ $REPLY =~ ^[Yy]$ ]] ; then
         $2
     fi
+}
+
+view_diff () {
+    cd ${REPODIR}
+    git diff
 }
 
 commit () {
@@ -49,4 +54,5 @@ do
 done
 
 echo
+confirm "View changes?" view_diff
 confirm "Commit changes to git?" commit
