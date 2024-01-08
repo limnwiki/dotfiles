@@ -32,7 +32,7 @@ view_diff () {
 commit () {
     cd ${REPODIR}
     git add .
-    git commit -m "+ update dotfiles"
+    git commit 
     git push
 }
 
