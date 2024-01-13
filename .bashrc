@@ -138,7 +138,7 @@ ex ()
 
 export PATH=$PATH:~/.local/bin/
 export EDITOR="nvim"
-export BROWSER="brave"
+export BROWSER="qutebrowser"
 export XDG_CACHE_HOME=~/.cache
 export MANPAGER="nvim +Man!"
 fish
